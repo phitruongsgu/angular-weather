@@ -1,0 +1,23 @@
+<app-menu (newItemEvent)="getEvent($event)"></app-menu>
+
+<br>
+<br>
+<div class="container " *ngIf="check">
+    <div class="row justify-content-center">
+        <div class="col-md-4 col-md-offset-4">
+            <div class="weather">
+                <div class="current">
+                    <div class="info">
+                        <div>&nbsp;</div>
+                        <div class="city"><small><small>Thành phố: </small></small>{{data.name}}</div>
+                        <div class="temp">{{data.main.temp_min}}&deg; <small>C</small> / {{data.main.temp_max}}&deg; <small>C</small></div>
+                        <div class="wind"><small><small>Thời tiết:</small></small> {{data.weather}}</div>
+                        <div class="wind"><small><small>Độ ẩm:</small></small> {{data.main.humidity}}%</div>
+                        <div class="wind"><small><small>Gió :</small></small> {{data.sp}}<small> km/h</small></div>
+                        <div>&nbsp;</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
